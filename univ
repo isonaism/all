@@ -1,0 +1,9 @@
+local placeId = game.PlaceId
+
+if placeId == 142823291 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lokinots/all/main/mm2"))()
+elseif placeId == 8737899170 or placeId == 920587237 or placeId == 13772394625 then
+    loadstring(game:HttpGet("https://egorikusa.space/d33119a385f4db153bee97c8.lua", true))()
+else
+    print("PlaceId не соответствует ни одному из заданных режимов.")
+end
