@@ -1,1 +1,30 @@
-loadstring(game:HttpGet("https://egorikusa.space/03f4509872669241abd5f41a.lua", true))()
+-- Создание кнопки на экране
+local ScreenGui = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+
+-- Настройка кнопки
+ScreenGui.Parent = game.CoreGui
+TextButton.Parent = ScreenGui
+TextButton.Text = "Script in discord. Click To Copy"
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Position = UDim2.new(0.5, -100, 0.5, -25)
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+
+-- Копирование ссылки при нажатии на кнопку и выполнение основного скрипта
+TextButton.MouseButton1Click:Connect(function()
+    if setclipboard then
+        -- Копирование ссылки
+        setclipboard("https://discord.gg/rWSxYNsP")
+        TextButton.Text = "Link copied!"
+
+        -- Отключаем кнопку после нажатия
+        TextButton.Active = false
+        TextButton.TextButton.Text = "Processing..."
+
+        -- Выполнение основного скрипта после короткой задержки
+        wait(1)  -- Подождём немного, чтобы убедиться, что ссылка скопирована
+        executeMainScript()
+    end
+end)
