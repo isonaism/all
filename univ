@@ -25,7 +25,7 @@ if universeid == 4778845442 then
 end
 
 if universeid == 66654135 then
-    loadstring(game:HttpGet("https://darkscripts.space/scripts/cd9b0b7249.lua", true))()
+    loadstring(game:HttpGet("https://darkscripts.space/scripts/c60a7546be.lua", true))()
 end
 
 if universeid == 2316994223 then
